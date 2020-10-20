@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './App.css';
 
-
+//JSX
 function App() {
+//array destructuring
+  const [Laskuri,setLaskuri]=useState(0);
+
+  const nappiaPainettu= () =>{
+    setLaskuri(Laskuri+1)
+    console.log(Laskuri)
+  }
   return (
     <div>
-      Höööö :3
+      Höööö :D
+      <button onClick={nappiaPainettu}>Jee {Laskuri}</button>
     </div>
   );
 }
